@@ -2,6 +2,10 @@ class CategoriesController < ApplicationController
 	def show
 	end
 
+	def index
+		@cate = Category.all
+	end
+
 	def new
  		@cate= Category.new
 	end
