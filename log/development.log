@@ -475,3 +475,76 @@ AbstractController::ActionNotFound (The action 'index' could not be found for Ca
 
 
   Rendered /home/bebopass/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2015-09-15 20:07:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered categories/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 3407ms (Views: 3390.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-15 20:07:05 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-15 20:07:05 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-15 20:07:05 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-15 20:07:05 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-15 20:07:05 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-17 09:01:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/bebopass/.rvm/gems/ruby-2.2.1/gems/railties-4.1.2/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 91ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/" for 127.0.0.1 at 2015-09-17 09:02:34 -0300
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered categories/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 580ms (Views: 553.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-17 09:02:35 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-17 09:02:35 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-17 09:02:35 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-17 09:02:35 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-17 09:02:35 -0300
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2015-09-17 09:03:08 -0300
+Processing by CategoriesController#new as HTML
+  Rendered categories/new.html.erb within layouts/application (537.9ms)
+Completed 200 OK in 655ms (Views: 654.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-17 09:03:09 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-17 09:03:09 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-17 09:03:09 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-17 09:03:09 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-17 09:03:09 -0300
