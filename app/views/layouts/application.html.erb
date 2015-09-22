@@ -34,7 +34,7 @@
         <li class="dropdown" id="text1">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
           role="button" aria-haspopup="true" aria-expanded="false" id="text1">
-          Categories <span class="caret">
+          Categorias <span class="caret">
           </span></a>
           <ul class="dropdown-menu"  id="text1">
             <li><a href="#">Category 1</a></li>
@@ -49,14 +49,14 @@
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search..." id="text1"
-          aria-describedby="basic-addon2" size="70px" >
-        </div>
-        <button type="submit" class="btn btn-danger" id="text2" >Find</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right" >
+
+      <%= form_tag('/posts',class:"navbar-form navbar-left") do%>
+       		<%= text_field_tag :nombre, '',
+				placeholder: "Ingrese el nombre" ,class:"form-control",size:"70px" %>
+  		<%= submit_tag 'Buscar',class:"btn btn-danger" %>
+  		
+		<% end %>
+       <ul class="nav navbar-nav navbar-right" >
         <li><a href="#" id="text1">About us</a></li>
         
           </ul>
