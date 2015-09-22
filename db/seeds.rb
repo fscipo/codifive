@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+puts "creo algunos productos"
+Product.find_or_create_by(nombre: "lavarropa", category_id: "1", user_id: "1", descripcion: "maquina para lavar la ropa", foto: "http://www.visitacasas.com/wp-content/uploads/2010/04/lavarropas_5.jpg" )
