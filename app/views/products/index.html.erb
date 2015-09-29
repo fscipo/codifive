@@ -1,5 +1,6 @@
-<!--
-<%= link_to "Listado de busqueda", products_path %>
+
+
+<%= link_to "Listado de busqueda" ,products_path %>
 
 
 <table class="table table-striped">
@@ -10,9 +11,9 @@
 
 <% @prod.each do |p| %>
 <tr>
-	<td> <%= p.nombre:nombre %> </td>
+	<td><%= p.nombre:nombre %> </td>
 	<td><%= p.descripcion:descripcion %></td>
 </tr>
-<% #end %>
+<% end %>
 
-</table>-->
+</table>
