@@ -8,24 +8,23 @@
   <%= csrf_meta_tags %>
 
 </head>
-<body >
+
 <body id="body">
 	<nav class="navbar navbar-default"  id="header">
   		<div class="container-fluid" > 
-    <!-- Brand and toggle get grouped for better mobile display -->
-   	 <div class="navbar-header" id="text1">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header" id="text1">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button> 
+		</button> 
        
       	<%=image_tag "avatar_Bestnid.png" %>
        
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
+    	</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav"  id="text1">
         <li ><a href="#" id="text1">Home <span class="sr-only" >(current)</span></a>
@@ -50,14 +49,15 @@
         </li>
       </ul>
 
-      <%= form_tag('/posts',class:"navbar-form navbar-left") do%>
-       		<%= text_field_tag :nombre, '',
-				placeholder: "Ingrese el nombre" ,class:"form-control",size:"70px" %>
-  		<%= submit_tag 'Buscar',class:"btn btn-danger" %>
-  		
-		<% end %>
-       <ul class="nav navbar-nav navbar-right" >
-        <li><a href="#" id="text1">About us</a></li>
+      <%=form_tag('/products/index.html.erb',class:"navbar-form navbar-left") do %>
+      	<%= text_field_tag :nombre,'', 
+      			size:"60px" ,class:"form-control" %>
+      	<%end%>
+      <%= submit_tag 'Buscar',class:"btn btn-danger" %>
+
+
+      <ul class="nav navbar-nav navbar-right" >
+        <li><a href="#" id="text1">Nosostros</a></li>
         
           </ul>
         </li>
@@ -65,18 +65,14 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-
 <%= yield %> 
 
 </body>
 
-
+<!--
   	<p align="center">
-  	<strong>Copyright 2013-2015 </strong>| Todos los derechos reservados<strong> Bestnid</strong> |La Plata| Argentina.Las fotos son a modo ilustrativo.
-	</p>
+  	<strong>Copyright 2013-2015 </strong>| Todos los derechos reservados
+  	<strong> Bestnid</strong> |La Plata| Argentina.Las fotos son a modo ilustrativo.</p>
+-->
 
-	
-	
-</footer>
 </html>

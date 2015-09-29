@@ -4,4 +4,11 @@ def index
 
 end
 
+
+#def create
+ # @prod = (Product.where(params[:nombre]) or Product.where(params[:descripcion]))
+  
+#end
+
+
 end
