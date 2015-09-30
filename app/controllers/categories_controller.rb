@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
 	end
 
 	def create
-		cate= Category.new(params.require(:category).permit (:nombre))
+		cate= Category.new(params.require(:category).permit(:nombre))
 		cate.save
 		redirect_to categories_path
 	end

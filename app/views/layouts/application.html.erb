@@ -65,7 +65,14 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<%= yield %> 
+
+<% if flash[:notice] %>
+<div class="alert alert-danger">
+<%= flash[:notice] %>
+</div>
+<% end %>
+
+  <%= yield %> 
 
 </body>
 
