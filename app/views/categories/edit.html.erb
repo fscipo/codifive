@@ -5,6 +5,9 @@
 	<div class="form-group">
 	<%= c.label :nombre %>
 	<%= c.text_field :nombre, required: true, class:"form-control" %>
+	<% if @cate.errors[:nombre].any? %>
+		<p class="help-block"><%= @cate.errors[:nombre].to_s[/\w([^"]*)/] %>.</p>
+	<% end %>
      </div>
 	<%= c.submit 'Guardar categoria', class:"btn btn-success" %>
 <%end%>	
