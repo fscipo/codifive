@@ -50,7 +50,7 @@
       </ul>
 
       <%=form_tag(products_path,class:"navbar-form navbar-left",method:'get') do %>
-      	<%= text_field_tag :nombre,params[:nombre],size:"60px" ,class:"form-control" %>
+      	<%= text_field_tag :nombre,params[:nombre],size:"60px", class:"form-control" %>
       
       <%= submit_tag 'Buscar',class:"btn btn-danger" %>
 	 <%end%>

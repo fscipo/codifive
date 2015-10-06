@@ -1,10 +1,12 @@
 class ProductsController < ApplicationController
 def index
 	if params[:nombre]
-		@prod=Product.where("nombre like '%#{params[:nombre]}%'")
+		@prod=Product.where("nombre like '%#{params[:nombre]}%' ")
 	else 
-		@prod = Product.all
+		@prod = Product.all		
 	end
+	@prod =@prod.where("vencimiento> '#{date.today}'")
+
 end
 
 def show
