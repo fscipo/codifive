@@ -1,6 +1,6 @@
 
 
-<%= link_to "Listado de Productos" ,products_path %>
+<h1>Listado de productos</h1>
 
 
 <table class="table table-hover">
@@ -12,9 +12,7 @@
 	<th>Fecha de vencimiento</th>
 	<th>Acciones</th>
 </tr>
-
 <% @prod.each do |p| %>
-	<% if p.vencimiento > Date.today %>
 	<tr>
 	<td> <%= p.nombre %> </td>
 	<td> <%= p.category.nombre %> </td>
@@ -25,6 +23,6 @@
 		<%= link_to 'Editar', edit_product_path(p), class: 'btn btn-primary' %> </td>
 	</tr>
 	<% end %>
-<% end %>
+
 
 </table>

@@ -49,15 +49,14 @@
         </li>
       </ul>
 
-      <%=form_tag('/products/index.html.erb',class:"navbar-form navbar-left") do %>
-      	<%= text_field_tag :nombre,'', 
-      			size:"60px" ,class:"form-control" %>
-      	<%end%>
+      <%=form_tag(products_path,class:"navbar-form navbar-left",method:'get') do %>
+      	<%= text_field_tag :nombre,params[:nombre],size:"60px", class:"form-control" %>
+      
       <%= submit_tag 'Buscar',class:"btn btn-danger" %>
-
+	 <%end%>
 
       <ul class="nav navbar-nav navbar-right" >
-        <li><a href="#" id="text1">Nosostros</a></li>
+        <li><a href="#" id="text1">Nosotros</a></li>
         
           </ul>
         </li>
