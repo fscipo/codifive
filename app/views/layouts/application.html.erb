@@ -64,14 +64,25 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<%= yield %> 
+
+<% if flash[:notice] %>
+<div class="alert alert-danger">
+<%= flash[:notice] %>
+</div>
+<% end %>
+
+<% if flash[:success] %>
+<div class="alert alert-success">
+<%= flash[:success] %>
+</div>
+<% end %>
+
+  <%= yield %> 
 
 </body>
 
-<!--
   	<p align="center">
   	<strong>Copyright 2013-2015 </strong>| Todos los derechos reservados
   	<strong> Bestnid</strong> |La Plata| Argentina.Las fotos son a modo ilustrativo.</p>
--->
 
 </html>
