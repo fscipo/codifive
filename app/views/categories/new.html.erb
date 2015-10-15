@@ -1,7 +1,9 @@
 <h2> Nueva Categoria</h2>
 <%= form_for @cate do |f| %>
 	<%= f.label :nombre %>
-	<%= f.text_field :nombre, required: true %>
-
+	<%= f.text_field :nombre, required: true%>
+	<% if @cate.errors[:nombre].any? %>
+		<p class="help-block"><%= @cate.errors[:nombre].to_s[/\w([^"]*)/] %>.</p>
+	<% end %>
 	<%= f.submit 'Guardar Categoria' %>
 <% end %>
