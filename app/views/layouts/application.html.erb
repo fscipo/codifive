@@ -21,15 +21,15 @@
         <span class="icon-bar"></span>
 		</button> 
        
-      	<%=image_tag "avatar_Bestnid.png" %>
-       
+      	<%= link_to root_path do %>
+         <%= image_tag("avatar_Bestnid.png", width: '75') %>
+       <% end %>
+
     	</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav"  id="text1">
-        <li ><a href="#" id="text1">Home <span class="sr-only" >(current)</span></a>
-        </li>
-        
+             
         <li class="dropdown" id="text1">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
           role="button" aria-haspopup="true" aria-expanded="false" id="text1">
@@ -57,7 +57,11 @@
 
       <ul class="nav navbar-nav navbar-right" >
         <li><a href="#" id="text1">Nosotros</a></li>
-        
+        <% if current_user %>
+    Hola <%= current_user.email %> <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete, class:"btn btn-danger" %>
+<% else %>
+    <%= link_to 'Iniciar Sesión', new_user_session_path, class:"btn btn-success" %>
+<% end %>
           </ul>
         </li>
       </ul>
@@ -73,7 +77,7 @@
 
 <% end %>
 
-<%= link_to 'Iniciar sesión', new_user_session_path %>
+
 
   <%= yield %> 
 
