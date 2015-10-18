@@ -56,7 +56,6 @@
 	 <%end%>
 
       <ul class="nav navbar-nav navbar-right" >
-        <li><a href="#" id="text1">Nosotros</a></li>
         <% if current_user %>
     Hola <%= current_user.email %> <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete, class:"btn btn-danger" %>
 <% else %>
@@ -85,7 +84,9 @@
 </body>
 
   	<p align="center">
+    <a href="#" id="text1">Nosotros</a>
   	<strong>Copyright 2013-2015 </strong>| Todos los derechos reservados
   	<strong> Bestnid</strong> |La Plata| Argentina.Las fotos son a modo ilustrativo.</p>
+
 
 </html>
