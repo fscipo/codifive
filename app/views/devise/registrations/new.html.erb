@@ -2,10 +2,27 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+<div class="row">
+  <div class="col-md-4">
+
+    <div class="field">
+      <%= f.label :nombre %><br />
+      <%= f.text_field :nombre, autofocus: true, class:"form-control", placeholder:"Ingrese aquí su nombre" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :apellido %><br />
+      <%= f.text_field :apellido, autofocus: true, class:"form-control", placeholder:"Ingrese aquí su apellido" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :nacimiento %><br />
+      <%= f.date_field :nacimiento, autofocus: true, class:"form-control", placeholder:"Ingrese aquí su fecha de nacimiento" %>
+    </div>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class:"form-control", placeholder:"Ingrese aquí su email" %>
   </div>
 
   <div class="field">
@@ -13,17 +30,20 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> caracteres mínimos)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"Ingrese aquí su contraseña" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control", placeholder:"Repita aqui su contraseña" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Crear cuenta" %>
+    <%= f.submit "Crear cuenta", class:"btn btn-primary" %>
   </div>
 <% end %>
+
+</div>
+</div>
 
 <%= render "devise/shared/links" %>
