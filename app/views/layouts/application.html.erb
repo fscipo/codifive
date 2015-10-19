@@ -57,7 +57,7 @@
 
       <ul class="nav navbar-nav navbar-right" >
         <% if current_user %>
-    Hola <%= current_user.email %> <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete, class:"btn btn-danger" %>
+    Hola <%= current_user.nombre %> <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete, class:"btn btn-danger" %>
 <% else %>
     <%= link_to 'Iniciar Sesión', new_user_session_path, class:"btn btn-success" %>
     <%= link_to 'Crear Cuenta', new_user_registration_path, class:"btn btn-primary"%>
