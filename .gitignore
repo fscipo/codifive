@@ -6,3 +6,4 @@ db/development.sqlite3
 app/controllers/categories_controller.rb
 db/development.sqlite3
 /log/development.log
+/config/database.yml
