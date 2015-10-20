@@ -3,14 +3,20 @@
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
+<div class="row">
+  <div class="col-md-4">
+
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class:"form-control", placeholder:"Ingrese aquí su email"  %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Enviarme instrucciones para cambiar mi contraseña" %>
+    <%= f.submit "Enviarme instrucciones para cambiar mi contraseña", class:"btn btn-primary" %>
   </div>
 <% end %>
+
+</div>
+</div>
 
 <%= render "devise/shared/links" %>
