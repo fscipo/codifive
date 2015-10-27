@@ -49,3 +49,7 @@ gem 'spring',        group: :development
 gem 'devise'
 
 gem 'rails_12factor', group: :production
+
+gem 'rails-i18n'
+
+gem 'devise-i18n'

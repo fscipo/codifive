@@ -1,0 +1,50 @@
+<div class="container-fluid">
+<h1>Subir un nuevo producto</h1>
+
+<div class="row">
+  <div class="col-md-4">
+
+<%= form_for @prod do |f| %>
+<p></p>
+    <div class="field">
+      <%= f.label :nombre %><br/>
+      <%= f.text_field :nombre, autofocus: true, class:"form-control", placeholder:"Ingrese aquí el nombre" %>
+    </div>
+</p>
+
+<p>
+<div class="field">
+<%= f.label :category_id, "Categoría" %><br />
+<%= collection_select(:product, :category_id, Category.all, :id, :nombre, {})%>
+</p>
+
+<p>
+    <div class="field">
+      <%= f.label :descripcion %><br/>
+      <%= f.text_area :descripcion, autofocus: true, class:"form-control", placeholder:"Ingrese aquí la descripcion" %>
+    </div>
+</p>
+<p>
+  <div class="field">
+    <%= f.label :foto %><br />
+    <%= f.text_field :foto, autofocus: true, class:"form-control", placeholder:"Ingrese aquí el link de la foto" %>
+  </div>
+</p>
+
+<p>
+<div class="field">
+    <%= f.label "Duración del producto" %><br />
+    <%= number_field_tag 'cantidad_dias',  in: 15.0..30.0, step: 1.0, class:"form-control"%>
+</div>
+</p>
+
+<%= f.hidden_field :fecha, :value => @fecha %>
+
+  <div class="actions">
+    <%= f.submit "Subir producto", class:"btn btn-primary" %>
+  </div>
+<%end%>
+
+</div>
+</div>
+</div>
