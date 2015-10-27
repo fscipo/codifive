@@ -58,6 +58,24 @@
       <ul class="nav navbar-nav navbar-right" >
         <% if current_user %>
     Hola <%= current_user.nombre %> <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete, class:"btn btn-danger" %>
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav"  id="text3">
+             
+        <li class="dropdown" id="text3">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
+          role="button" aria-haspopup="true" aria-expanded="false" id="text3">
+          Opciones <span class="caret">
+          </span></a>
+          <ul class="dropdown-menu"  id="text3">
+            <li><%= link_to 'Editar cuenta', edit_user_registration_path%></li>
+            <li><a href="#">Eliminar Cuenta</a></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to 'Publicar producto', new_product_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to 'Administrar categorias', categories_path %></li>
+          </ul>
+        </li>
+      </ul>
 <% else %>
     <%= link_to 'Iniciar Sesión', new_user_session_path, class:"btn btn-success" %>
     <%= link_to 'Crear Cuenta', new_user_registration_path, class:"btn btn-primary"%>
