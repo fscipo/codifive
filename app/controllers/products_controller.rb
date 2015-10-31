@@ -30,7 +30,7 @@ def create
 			flash[:success]= "Se creado el producto correctamente"
 			redirect_to products_path
 		else
-			flash[:notice]= "Ocurrio un error al guardar el producto"
+			flash[:danger]= "Ocurrio un error al guardar el producto"
 			render :new
 		end
 end
