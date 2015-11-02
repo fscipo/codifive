@@ -6,7 +6,7 @@ end
 
 def index
 	if params[:nombre]
-		@prod=Product.where("nombre like '%#{params[:nombre]}%' ")
+		@prod=Product.where("nombre like '%#{params[:nombre]}%'  or  descripcion like '%#{params[:descripcion]}%' ")
 	else 
 		@prod = Product.all		
 	end
