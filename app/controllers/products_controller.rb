@@ -23,13 +23,14 @@ def new
 end
 
 def create
-	@prod= Product.new(params.require(:product).permit(:nombre, :category_id, :descripcion, :foto))
+	fecha= Date.today + Integer(params['cantidad_dias'])
+	@prod= Product.new(params.require(:product).permit(:nombre, :category_id, :descripcion, :foto).merge(vencimiento: fecha))
 	@prod.user_id = current_user.id
 		if @prod.save
 			flash[:success]= "Se creado el producto correctamente"
 			redirect_to products_path
 		else
-			flash[:notice]= "Ocurrio un error al guardar el producto"
+			flash[:danger]= "Ocurrio un error al guardar el producto"
 			render :new
 		end
 end
