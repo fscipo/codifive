@@ -6,7 +6,7 @@ end
 
 def index
 	if params[:nombre]
-		@prod=Product.where("nombre like '%#{params[:nombre]}%' ")
+		@prod=Product.where("nombre like '%#{params[:nombre]}%'  or  descripcion like '%#{params[:descripcion]}%' ")
 	else 
 		@prod = Product.all		
 	end
@@ -16,6 +16,9 @@ end
 
 def show
 	@prod = Product.find(params[:id])
+	o = Offer.where(product_id: @prod.id, client_id: current_user.id)
+	@ya_oferto = o.empty?
+	@offer = Offer.new
 end
 
 def new
