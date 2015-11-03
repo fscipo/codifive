@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20151031184822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "adminpack"
 
   create_table "categories", force: true do |t|
     t.string   "nombre"
