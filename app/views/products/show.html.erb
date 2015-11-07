@@ -11,6 +11,37 @@
 
 <button type="button" class="btn btn-success">Comprar</button>
 
+<% if current_user %>
 
+<div class="row">
+  <div class="col-md-4">
+<h4>Cree una oferta</h4>
+<%= form_for @offer do |f| %>
+  <p>
+    <%= f.label :razon %><br>
+    <%= f.text_area :razon, autofocus: true, class:"form-control", placeholder:"Ingrese aquí la razón por la cual desea comprar el producto" %>
+  </p>
+  <p>
+    <%= f.label :precio %><br>
+    <%= f.number_field :precio, autofocus: true, class:"form-control", placeholder:"Ingrese aquí el precio" %>
+  </p>
+  <p>
+    <%= f.label :tarjeta %><br>
+    <%= f.text_field :tarjeta, autofocus: true, class:"form-control", placeholder:"Ingrese aquí el número de tarjeta de crédito" %>
+  </p>
+  <p>
+    <%= f.label :codigo %><br>
+    <%= f.password_field :codigo, autofocus: true, class:"form-control", placeholder:"Ingrese aquí el codigo de su tarjeta" %>
+  </p>
+  <%= hidden_field_tag "product_id",nil, :value => @prod.id %>
+  <p>
+    <%= f.submit "Crear oferta", class:"btn btn-success"  %>
+  </p>
+<% end %>
+
+</div>
+</div>
+
+<% end %>
 
 </div>

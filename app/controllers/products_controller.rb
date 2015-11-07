@@ -16,9 +16,11 @@ end
 
 def show
 	@prod = Product.find(params[:id])
+	if current_user
 	o = Offer.where(product_id: @prod.id, client_id: current_user.id)
 	@ya_oferto = o.empty?
 	@offer = Offer.new
+end
 end
 
 def new
