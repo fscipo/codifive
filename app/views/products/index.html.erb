@@ -19,9 +19,7 @@
 	<td> <%= p.descripcion %> </td>
 	<td> <%= image_tag(p.foto , width: '75')%> </td>
 	<td> <%= p.vencimiento %> </td>
-	<td><%= link_to 'Eliminar', product_path(p), method: :delete, data: {confirm: 'Estas seguro que quieres eliminar este producto'}, class: 'btn btn-danger' %>
-		<%= link_to 'Editar', edit_product_path(p), class: 'btn btn-success' %>
-		<%= link_to 'Ver detalle', product_path(p), class: 'btn btn-primary' %> </td>
+	<td> <%= link_to 'Ver detalle', product_path(p), class: 'btn btn-primary' %> </td>
 	</tr>
 	<% end %>
 

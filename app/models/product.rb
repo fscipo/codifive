@@ -8,6 +8,6 @@ class Product < ActiveRecord::Base
 
 	belongs_to :category
 	belongs_to :user
-	has_many :offers
-	has_many :questions
+	has_many :offers, dependent: :destroy
+	has_many :questions, dependent: :destroy
 end
