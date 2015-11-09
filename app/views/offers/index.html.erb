@@ -1,0 +1,18 @@
+<div class="container-fluid">
+<h2> Elige una oferta sobre su producto </h2>
+
+<table class="table table-striped">
+<tr>
+<th>Razón</th>
+<th>Acciones</th>
+</tr>
+
+<% @offer.each do |o| %>
+<tr>
+	<td> <%= o.razon %> </td>
+	<td> <%= link_to 'Elegir oferta', offer_path(o), class: 'btn btn-primary' %> </td>
+</tr>
+<% end %>
+
+</table>
+</div>

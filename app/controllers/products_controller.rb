@@ -5,8 +5,8 @@ def calculo
 end	
 
 def index
-	if params[:nombre]
-		@prod=Product.where("nombre like '%#{params[:nombre]}%'  or  descripcion like '%#{params[:descripcion]}%' ")
+	if params[:search]
+		@prod=Product.search(params[:search])
 	else 
 		@prod = Product.all		
 	end

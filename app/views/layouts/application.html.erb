@@ -50,7 +50,7 @@
       </ul>
 
       <%=form_tag(products_path,class:"navbar-form navbar-left",method:'get') do %>
-      	<%= text_field_tag :nombre,params[:nombre],size:"60px", class:"form-control" %>
+      	<%= text_field_tag :search,params[:search], placeholder: "Ingrese aquí lo que desea buscar del producto", size:"60px", class:"form-control" %>
       
       <%= submit_tag 'Buscar',class:"btn btn-danger" %>
 	 <%end%>
@@ -68,7 +68,7 @@
           </span></a>
           <ul class="dropdown-menu"  id="text3">
             <li><%= link_to 'Editar cuenta', edit_user_registration_path%></li>
-            <li><%= link_to "Eliminar cuenta", registration_path('user'), data: { confirm: "¿Estas seguro?" }, method: :delete %></li>
+            <li><%= link_to "Eliminar cuenta", registration_path('user'), data: { confirm: "¿Estas seguro de que quiere eliminar su cuenta de Bestnid?" }, method: :delete %></li>
             <li role="separator" class="divider"></li>
             <li><%= link_to 'Publicar producto', new_product_path %></li>
             <li role="separator" class="divider"></li>
