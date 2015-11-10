@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
  has_many :products
+ has_many :questions
+ has_many :offer
 
 	validates :nombre,
 		presence: true

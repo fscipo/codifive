@@ -9,6 +9,7 @@ class Product < ActiveRecord::Base
 	validates_presence_of :nombre
 	validates_presence_of :descripcion
 	validates_presence_of :foto
+	
 
 	belongs_to :category
 	belongs_to :user
